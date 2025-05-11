@@ -58,4 +58,5 @@ if st.button("Get Fertilizer Recommendation"):
     prediction = model.predict(input_data)[0]
     fertilizer = fertilizer_decoder.inverse_transform([prediction])[0]
 
-    st.success(f"Recommended Fertilizer as per the Data is: **{fertilizer}**")
+    st.markdown(f"✅ **Recommended Fertilizer:** <span style='color:white'>{fertilizer}</span>", unsafe_allow_html=True)
+
